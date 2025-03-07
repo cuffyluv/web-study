@@ -1,0 +1,126 @@
+:root{
+    --primaryColor:green;
+    --errorColor:orange;
+}
+/* //css에 변수를 선언할때는 :root{}이렇게 입력하고
+{}안에다가 key와value값으로 값을설정한다. key값은
+아무렇게나 정해도 되고 value값은 css값을설정한다. */
+
+
+
+html{
+    box-sizing:border-box;
+    /* //박스모델(content,padding,border,margin) 설정*/
+    /* content-box는 영역의 크기를 지정할때 패딩과 테두리를 
+    제외한 content크기만을 계산 */
+    /* border-box는 영역의 크기를 지정할때 패딩과 테두리를 
+    포함한 content크기를 계산한다. */
+    /* //일반적으로 인간은 컨텐츠크기를 지정할때 
+    패딩과 테두리도 포함합니다. */
+}
+
+body{
+    display: flex;
+    align-items:center;
+    /* 수직중앙정렬 */
+    justify-content: center;
+    /* 수평중앙정렬 */
+    min-height: 100vh;
+    /* 뷰포트의 높이를 100%를 최소높이로 지정 */
+    background-color: white;
+}
+/* //display:flex를 먹인태그는 
+//부모태그가 되는거고 div태그는 자식태그가 됩니다. */
+
+#wrapper{
+    width: 420px;
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.2);
+    /* //box-shadow의 역할은 영역의 그림자를 설정합니다. */
+    /* 0px은 수평방향의 그림자를 생성 */
+    /* 4px은 수직방향으로 그림자를 생성 */
+    /* 14px은 그림자의 블러값(그림자의흐림도)를적용 */
+    /*rgba(0,0,0,0.2); 은 그림자색깔*/
+}
+
+h2{
+    text-align: center;
+    margin-top:20px;
+}
+
+.inputGroup{
+    padding: 8px 12px;
+    /* //8px은 패딩을 위아래로 8px씩
+    //12px은 패딩을 왼쪽오른쪽으로 12px씩 줍니다. */
+}
+
+.inputGroup label{
+    display:block;
+    padding:12px 0;
+}
+
+.inputGroup input{
+    display:block;
+    /* //display:block은영역(2차원)과공간(3차원)을 차지한다고 했습니다. */
+    /* //display:inline 영역과 너비를 가지지 못합니다. 그말은 즉 width와height속성을 설정이불가능하다. */
+   /*//display:inline-block은 영역과 너비를 가지면서 
+   가로줄은 요소 하나가 다 차지하지 
+   않고 가로줄로 여로요소가 쌓일수 있습니다.*/
+    width: 93%;
+    padding:12px;
+    border:2px solid #e2e2e2;
+    font-size:16px;
+}
+
+.inputGroup input:focus{
+    outline:none;
+    /* //테두리를 안보이게 하는거 */
+    border-color:#777;
+    /* //테두리 색깔 지정 */
+}
+
+.inputGroup.valid input{
+    border-color:var(--primaryColor);
+
+    /* //테두리 색깔이 초록색 */
+    /* .valid는 자바스크립트로 가상의 */
+     /* css선택자를 설정한다 */
+     /* var(--primaryColor) => green */
+}
+
+.inputGroup.invalid input{
+    border-color:var(--errorColor);
+    /* //테두리 색깔이 초록색 */
+    /* .valid는 자바스크립트로 가상의 */
+     /* css선택자를 설정한다 */
+     /* var(--primaryColor) => green */
+     visibility: visible;
+}
+
+.inputGroup .helperText{
+    display:block;
+    padding-top:8px;
+}
+
+.inputGroup.valid .helperText{
+    visibility:hidden;
+    display: block;
+    
+}
+
+.inputGroup.invalid .helperText{
+    color:var(--errorColor);
+}
+
+#wrapper button{
+    display:block;
+    width:85%;
+    margin: 0 auto;
+    height:50px;
+    margin-bottom:25px;
+    font-size:18px;
+    background-color:var(--primaryColor);
+    border:2px solid var(--primaryColor);
+    color:white;
+    /* //텍스트 색깔 */
+    cursor: pointer;
+}

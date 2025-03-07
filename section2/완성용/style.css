@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* 모든 요소의 박스 모델을 border-box로 설정해 padding과 border를 포함하여 크기를 계산 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0; /* body의 내부 여백을 0으로 설정 */
+    margin: 0; /* body의 바깥 여백을 0으로 설정 */
+    display: flex; /* body 안의 요소들을 flexbox로 배치 */
+    align-items: center; /* 세로 방향으로 중앙 정렬 */
+    justify-content: center; /* 가로 방향으로 중앙 정렬 */
+    min-height: 100vh; /* 최소 높이를 화면의 100%로 설정 */
+    color: #2c3e50; /* 텍스트 색상을 진한 회색으로 설정 */
+    background-color: #f0f8ff; /* 밝은 파란색 계열의 배경색 설정 */
+    font-family: 'Noto Sans KR', sans-serif; /* 폰트를 'Noto Sans KR'로 설정 */
+    animation: fadein 1.5s; /* 1.5초 동안 적용되는 fadein 애니메이션 설정 */
+}
+
+@keyframes fadein {
+    /* 애니메이션의 시작 상태에서 투명하게 설정 */
+    from {
+        opacity: 0%; /* 불투명도 0%로 설정하여 완전히 투명하게 */
+    }
+    /* 애니메이션이 끝날 때 불투명하게 설정 */
+    to {
+        opacity: 100%; /* 불투명도 100%로 설정하여 완전히 보이게 */
+    }
+}
+
+.container {
+    text-align: center; /* 내부의 모든 텍스트와 요소를 중앙 정렬 */
+}
+
+h1 {
+    margin-bottom: 0; /* 제목 요소 아래의 여백을 제거 */
+    font-size: 300%; /* 폰트 크기를 300%로 설정 */
+    color: #34495e; /* 더 밝은 회색 계열의 폰트 색상 */
+}
+
+.calculator {
+    display: inline-block; /* 요소를 인라인 블록으로 설정 */
+}
+
+input {
+    direction: ltr; /* 입력 방향을 왼쪽에서 오른쪽으로 설정 */
+    background-color: #ffffff; /* 흰색의 배경색 설정 */
+    width: 80vw; /* 화면 너비의 80%만큼 입력 필드 너비 설정 */
+    font-size: 3rem; /* 폰트 크기를 3rem로 설정 */
+    color: #2c3e50; /* 입력 텍스트 색상을 진한 회색으로 설정 */
+    font-weight: bold; /* 텍스트를 굵게 표시 */
+    border: 2px solid #bdc3c7; /* 밝은 회색 계열의 테두리 설정 */
+    border-radius: 0.5rem; /* 테두리를 부드럽게 0.5rem의 반경으로 둥글게 설정 */
+}
+
+table {
+    margin: 0 auto; /* 테이블을 가로 방향으로 중앙에 배치 */
+}
+
+button {
+    border: none; /* 버튼의 테두리를 없앰 */
+    background-color: #ecf0f1; /* 밝은 회색 계열의 배경색 설정 */
+    width: 20vw; /* 버튼 너비를 화면의 20%로 설정 */
+    height: 10vh; /* 버튼 높이를 화면의 10%로 설정 */
+    font-size: 2rem; /* 버튼 텍스트 크기를 2rem로 설정 */
+    border-radius: 0.5rem; /* 테두리를 부드럽게 0.5rem의 반경으로 둥글게 설정 */
+    color: #2c3e50; /* 버튼 텍스트 색상을 진한 회색으로 설정 */
+    transition: box-shadow 0.3s ease, transform 0.2s ease; /* 그림자 및 크기 변경 효과를 부드럽게 0.3초 및 0.2초 동안 적용 */
+}
+
+button:active {
+    transform: scale(0.95); /* 버튼을 누를 때 크기를 0.95배로 작게 축소 */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.15); /* 버튼을 누를 때 약간의 그림자 효과 추가 */
+}
+
+button:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); /* 버튼에 마우스를 올렸을 때 더 밝은 그림자 효과를 추가 */
+}

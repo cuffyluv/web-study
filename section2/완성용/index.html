@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카네스블랙 계산기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="color:black;margin-left:0.25rem;">
+            카네스블랙계산기
+        </h1>
+        <br>
+        <div class="calculator">
+            <input type="text" name="screen" id="screen" readonly>
+            <table>
+                <tr>
+                    <td colspan="3"><button id="resetButton" style="width:100%;background-color:#f01600; font-weight:bold;color:#ecf0f1;">C</button></td>
+                    <td><button>/</button></td>
+                </tr>
+                <tr>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>*</button></td>
+                </tr>
+                <tr>
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td><button>-</button></td>
+                </tr>
+                <tr>
+                    <td><button>1</button></td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td><button>+</button></td>
+                </tr>
+                <tr>
+                    <td><button></button></td>
+                    <td><button style="font-weight:bold;">0</button></td>
+                    <td><button></button></td>
+                    <td><button id="result" style="background-color: #30edbe;font-weight:bold;color:white;">=</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
